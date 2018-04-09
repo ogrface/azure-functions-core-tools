@@ -194,7 +194,8 @@ Target "GenerateZipToSign" (fun _ ->
     MoveFileTo (buildDirNoRuntime @@ "workers/node/worker-bundle.js", buildDirNoRuntime @@ "worker-bundle.js")
 
     !! (buildDirNoRuntime @@ "/**/*.dll")
-    ++ (buildDirNoRuntime @@ "/*.js")
+    ++ (buildDirNoRuntime @@ "workers/node/worker-bundle.js")
+    ++ (buildDirNoRuntime @@ "workers/node/dist/src/nodejsWorker.js")
         |> Seq.filter (fun f -> firstParty |> List.contains (f |> Path.GetFileName))
         |> CreateZip buildDirNoRuntime toSignZipPath String.Empty 7 true
 
