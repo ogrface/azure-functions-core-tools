@@ -190,9 +190,6 @@ Target "GenerateZipToSign" (fun _ ->
     MoveFileTo (buildDirNoRuntime @@ "workers/node/grpc/src/node/extension_binary/node-v57-win32-ia32/grpc_node.node", buildDirNoRuntime @@ "grpc_node_winx86_node57.dll")
     MoveFileTo (buildDirNoRuntime @@ "workers/node/grpc/src/node/extension_binary/node-v57-win32-x64/grpc_node.node", buildDirNoRuntime @@ "grpc_node_winx64_node57.dll")
 
-    MoveFileTo (buildDirNoRuntime @@ "workers/node/dist/src/nodejsWorker.js", buildDirNoRuntime @@ "nodejsWorker.js")
-    MoveFileTo (buildDirNoRuntime @@ "workers/node/worker-bundle.js", buildDirNoRuntime @@ "worker-bundle.js")
-
     !! (buildDirNoRuntime @@ "/**/*.dll")
     ++ (buildDirNoRuntime @@ "workers/node/worker-bundle.js")
     ++ (buildDirNoRuntime @@ "workers/node/dist/src/nodejsWorker.js")
