@@ -153,6 +153,8 @@ Target "GenerateZipToSign" (fun _ ->
         "Microsoft.Azure.WebJobs.Script.Grpc.dll"
         "Microsoft.Azure.WebJobs.Script.WebHost.dll"
         "Microsoft.Azure.WebSites.DataProtection.dll"
+        "worker-bundle.js"
+        "nodejsWorker.js"
     ]
 
     let thirdParty = [
